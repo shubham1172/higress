@@ -43,6 +43,7 @@ dependencies = [
 name = "higress-wasm-rust"
 version = "0.1.0"
 dependencies = [
+ "multimap",
  "proxy-wasm",
  "serde",
  "serde_json",
@@ -66,6 +67,15 @@ name = "log"
 version = "0.4.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "518ef76f2f87365916b142844c16d8fefd85039bc5699050210a7778ee1cd1de"
+
+[[package]]
+name = "multimap"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "defc4c55412d89136f966bbb339008b474350e5e6e78d2714439c386b3137a03"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "once_cell"

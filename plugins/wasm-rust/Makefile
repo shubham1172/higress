@@ -14,3 +14,10 @@ build:
 	    .
 	@echo ""
 	@echo "output wasm file: extensions/${PLUGIN_NAME}/plugin.wasm"
+
+build-local:
+	@echo "Building local wasm file..."
+	rustup target add wasm32-wasi
+	cd extensions/${PLUGIN_NAME} \
+		&& cargo build --target wasm32-wasi --release \
+		&& cp target/wasm32-wasi/release/*.wasm plugin.wasm
