@@ -14,3 +14,4 @@ tools/bin/
 helm/**/charts/**.tgz
 target/
 tools/hack/cluster.conf
+tinygo/

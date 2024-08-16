@@ -64,7 +64,7 @@ builder:
 	@echo "image: ${BUILDER}"
 
 local-build:
-	tinygo build -scheduler=none -target=wasi -gc=custom -tags='custommalloc nottinygc_finalizer' \
+	tinygo/bin/tinygo build -scheduler=none -target=wasi -gc=custom -tags='custommalloc nottinygc_finalizer' \
 		-o extensions/${PLUGIN_NAME}/main.wasm \
 		extensions/${PLUGIN_NAME}/main.go
 	@echo ""
